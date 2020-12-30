@@ -4,3 +4,4 @@
   tasks:
   - name: upgrade packages
     shell: apt-get upgrade
+    ignore_errors: true

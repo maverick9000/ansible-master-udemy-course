@@ -1,12 +1,6 @@
 - hosts: all
 
   tasks:
-  - name: install ruby cause rvm needs ruby to install ruby
-    apt:
-      pkg: ruby
-      state: latest
-    become: yes
-
   - name: install app ruby
     shell: /usr/local/rvm/bin/rvm install {{app.ruby}}
 
@@ -15,8 +9,3 @@
 
   - name: install bundler
     shell: "/usr/local/rvm/bin/rvm {{app.ruby}}@{{app.name}}_{{app.environment}} do gem install bundler"
-    when: app.ruby|int >= 2
-
-  - name: install bundler 1.x
-    shell: "/usr/local/rvm/bin/rvm {{app.ruby}}@{{app.name}}_{{app.environment}} do gem install bundler -v '~>1'"
-    when: app.ruby|int <= 1
