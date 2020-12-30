@@ -1,3 +1,3 @@
-# Ansible Maverick
+# Ansible Master Udemy Course supplementary material
 
-Here is the source code so you don't have to type it because typing takes time and time is money and Orange Lamborghinis are expensive.
+Please use this resource to supplement your learning 
