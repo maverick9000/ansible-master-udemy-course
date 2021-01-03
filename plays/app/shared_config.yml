@@ -25,9 +25,3 @@
         - "database.yml"
         - "app_config.yml"
         - "s3_config.yml"
-
-    - name: install additional postgresql packages
-      apt:
-        name: libpq-dev
-        state: latest
-      when: psql_required

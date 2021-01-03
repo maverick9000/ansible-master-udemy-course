@@ -41,5 +41,4 @@
       hour: "1"
       user: "root"
       job: "bash -c 'source /usr/local/rvm/scripts/rvm;rvm {{global_ruby}}@{{app.name}}_{{app.environment}}_backup &>/dev/null;backup perform -qt {{app.name}}_{{app.environment}}_psql_backup,{{app.name}}_{{app.environment}}_directory_backup -c /var/www/{{app.environment}}/{{app.name}}/shared/backup/config.rb'"
-      #cron_file: "{{app.name}}_{{app.environment}}_backup"
     when: app.environment == 'production'

@@ -9,8 +9,6 @@ etc_backup_required: false
 
 configure_db: false
 make_db_superuser: false
-num_thins: 0
-puma_required: true
 
 psql_required: false
 psql_type: web
